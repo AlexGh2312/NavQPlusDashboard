@@ -53,8 +53,7 @@ Aplicația se conectează la o placă activă prin SSH, citește un set de infor
 
 ## Capturi de ecran
 
-![Diagnosticare live](screenshots/tab1.png)
-![Comparație hardware](screenshots/tab2.png)
+*(De adăugat: capturi din aplicație, pentru fiecare tab.)*
 
 ---
 
@@ -189,6 +188,12 @@ NavQPlusDashboard/
 
 ---
 
+## Licență
+
+Acest proiect este distribuit sub licența **MIT** — vezi fișierul [LICENSE](LICENSE) pentru textul complet. Poate fi folosit, modificat și distribuit liber, inclusiv în scop comercial, cu păstrarea mențiunii de autor.
+
+---
+
 ## Autor
 
-Dezvoltat de **Gheorghiu Alexandru-Dan**, student FIIR (Facultatea de Inginerie Industrială și Robotică), Politehnica București.
+Dezvoltat de **Gheorghiu Alexandru-Dan**, student FIIR (Facultatea de Inginerie Industrială și Robotică), Politehnica București — în cadrul activității din **Arkon Robotics**.
