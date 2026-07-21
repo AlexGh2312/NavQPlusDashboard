@@ -6,20 +6,291 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1091</width>
+    <height>749</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_1">
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <attribute name="title">
+        <string>Diagnosticare live</string>
+       </attribute>
+       <widget class="QWidget" name="horizontalLayoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>40</y>
+          <width>881</width>
+          <height>561</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QGroupBox" name="groupBox">
+           <property name="title">
+            <string>Placă activă</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QLineEdit" name="inputHost">
+              <property name="text">
+               <string>IP placă:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="inputBoardLabel">
+              <property name="text">
+               <string>Nume placă:</string>
+              </property>
+              <property name="placeholderText">
+               <string>Nume placă (opțional — auto-detectat dacă gol)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="inputUser">
+              <property name="placeholderText">
+               <string>User SSH (ex: root, user)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="textActiveBoardStatus">
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_4">
+              <property name="title">
+               <string/>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <widget class="QCheckBox" name="chkAutoRefresh">
+               <property name="geometry">
+                <rect>
+                 <x>300</x>
+                 <y>10</y>
+                 <width>151</width>
+                 <height>23</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Monitorizare live</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="btnFetchSpecs">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>10</y>
+                 <width>241</width>
+                 <height>26</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Citește specificații</string>
+               </property>
+              </widget>
+              <widget class="QSpinBox" name="spinRefreshInterval">
+               <property name="geometry">
+                <rect>
+                 <x>460</x>
+                 <y>10</y>
+                 <width>44</width>
+                 <height>27</height>
+                </rect>
+               </property>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Comparatie hardware</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="title">
+           <string>Raspberry Pi 4</string>
+          </property>
+          <widget class="QLabel" name="labelPi4Specs">
+           <property name="geometry">
+            <rect>
+             <x>2</x>
+             <y>33</y>
+             <width>541</width>
+             <height>241</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+          <widget class="QGroupBox" name="groupBox_3">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>280</y>
+             <width>531</width>
+             <height>351</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string>Raspberry Pi 5</string>
+           </property>
+           <widget class="QLabel" name="labelPi5Specs">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>20</y>
+              <width>531</width>
+              <height>211</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="labelActiveBoardSummary">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>230</y>
+              <width>531</width>
+              <height>131</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="comboPi5Ram">
+            <property name="geometry">
+             <rect>
+              <x>220</x>
+              <y>0</y>
+              <width>86</width>
+              <height>26</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>2GB</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>4GB</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>8GB</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>16GB</string>
+             </property>
+            </item>
+           </widget>
+          </widget>
+          <widget class="QPushButton" name="btnCompare">
+           <property name="geometry">
+            <rect>
+             <x>780</x>
+             <y>590</y>
+             <width>94</width>
+             <height>26</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Compară</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboPi4Ram">
+           <property name="geometry">
+            <rect>
+             <x>220</x>
+             <y>0</y>
+             <width>86</width>
+             <height>26</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>1GB</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2GB</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>4GB</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>8GB</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QPlainTextEdit" name="textComparisonResult">
+           <property name="geometry">
+            <rect>
+             <x>550</x>
+             <y>10</y>
+             <width>491</width>
+             <height>571</height>
+            </rect>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1091</width>
      <height>23</height>
     </rect>
    </property>
